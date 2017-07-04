@@ -25,10 +25,14 @@ window.fbAsyncInit = function() {
 		appId      : '685469858315867',
 		cookie     : true,
 		xfbml      : true,
-		version    : 'v2.8'
+		version    : 'v2.9'
 	});
 	FB.AppEvents.logPageView();   
 };
+
+FB.getLoginStatus(function(response) {
+	statusChangeCallback(response);
+});
 
 (function(d, s, id){
 	var js, fjs = d.getElementsByTagName(s)[0];
@@ -38,10 +42,6 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
-FB.getLoginStatus(function(response) {
-	statusChangeCallback(response);
-});
 
 function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
