@@ -30,10 +30,6 @@ window.fbAsyncInit = function() {
 	FB.AppEvents.logPageView();   
 };
 
-FB.getLoginStatus(function(response) {
-	statusChangeCallback(response);
-});
-
 (function(d, s, id){
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) {return;}
@@ -42,6 +38,9 @@ FB.getLoginStatus(function(response) {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+FB.getLoginStatus(function(response) {
+	statusChangeCallback(response);
+});
 
 function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
