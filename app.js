@@ -16,11 +16,9 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
 FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
 });
-
 
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
@@ -29,7 +27,7 @@ function checkLoginState() {
 }
 
 
-function statusChangeCallback(response) {
+/*function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -54,4 +52,4 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
-  }
+  }*/
