@@ -27,7 +27,7 @@ function checkLoginState() {
 }
 
 
-/*function statusChangeCallback(response) {
+function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -52,4 +52,4 @@ function checkLoginState() {
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
-  }*/
+  }
